@@ -64,3 +64,31 @@ h6 {
   border-radius: 10px;
   border: 1px solid #1139ec;
 }
+
+#ul_nav {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 80px;
+  list-style-type: none;
+  vertical-align: middle;
+}
+
+#li_nav {
+  vertical-align: middle;
+}
+
+#div_nav {
+  vertical-align: middle;
+}
+
+.div_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  vertical-align: middle;
+}
