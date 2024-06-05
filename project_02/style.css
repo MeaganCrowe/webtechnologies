@@ -41,10 +41,10 @@ h4 {
 }
 
 h5 {
-  color: white;
+  color: antiquewhite;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
   letter-spacing: -1px;
 }
@@ -68,17 +68,17 @@ h6 {
 #ul_nav {
   display: inline-flex;
   align-items: flex-start;
-  gap: 80px;
+  gap: 60px;
   list-style-type: none;
   vertical-align: middle;
 }
 
 #li_nav {
-  vertical-align: middle;
+  align-items: center;
 }
 
 #div_nav {
-  vertical-align: middle;
+  align-items: center;
 }
 
 .div_header {
@@ -88,7 +88,39 @@ h6 {
   vertical-align: middle;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  vertical-align: middle;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+#button {
+  display: block;
+  padding: 16px 30px;
+  background: #1139ec;
+  border-radius: 10px;
+}
+
+#hero {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.main_text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.section_01 {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 130px;
+  gap: 50px;
+}
+
+#hr1 {
+  border-top: 1 px solid #1139ec;
+  padding-bottom: 10px;
 }
