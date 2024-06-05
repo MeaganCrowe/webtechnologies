@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  color: #0019ff;
+  background-color: #f4ece0;
+}
+
+.header-text-size {
+  font-size: 96px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: -8.64px;
+}
+
+.deeznuts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #2a49eb;
+}
