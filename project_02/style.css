@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 80px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -25,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-size: 64px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -33,7 +33,7 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -42,7 +42,7 @@ h4 {
 
 h5 {
   color: antiquewhite;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -50,7 +50,7 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -65,7 +65,7 @@ h6 {
   border: 1px solid #1139ec;
 }
 
-#ul_nav {
+.ul_nav {
   display: inline-flex;
   align-items: flex-start;
   gap: 60px;
@@ -73,7 +73,7 @@ h6 {
   vertical-align: middle;
 }
 
-#li_nav {
+.li_nav {
   align-items: center;
 }
 
@@ -121,6 +121,5 @@ h6 {
 }
 
 #hr1 {
-  border-top: 1 px solid #1139ec;
-  padding-bottom: 10px;
+  border-bottom: 1 px solid #1139ec;
 }
