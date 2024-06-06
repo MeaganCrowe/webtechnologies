@@ -8,6 +8,15 @@ body {
   background-color: antiquewhite;
 }
 
+.button {
+  display: block;
+  padding: 16px 30px;
+  background: #1139ec;
+  border-radius: 10px;
+}
+
+/* HEADERS */
+
 h1 {
   font-size: 80px;
   font-style: normal;
@@ -57,6 +66,8 @@ h6 {
   letter-spacing: -1px;
 }
 
+/* NAVIGATION HEADER BAR */
+
 .logo {
   display: inline-flex;
   padding: 4px 26px;
@@ -71,13 +82,21 @@ h6 {
   gap: 60px;
   list-style-type: none;
   vertical-align: middle;
+  padding: 0%;
 }
 
 .li_nav {
   align-items: center;
 }
 
-#div_nav {
+.div_nav {
+  align-items: center;
+}
+
+.button-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
   align-items: center;
 }
 
@@ -93,12 +112,7 @@ h6 {
   align-items: center;
 }
 
-#button {
-  display: block;
-  padding: 16px 30px;
-  background: #1139ec;
-  border-radius: 10px;
-}
+/* SECTION 01 */
 
 #hero {
   width: 500px;
@@ -118,8 +132,4 @@ h6 {
   flex-direction: row;
   padding: 50px 130px;
   gap: 50px;
-}
-
-#hr1 {
-  border-bottom: 1 px solid #1139ec;
 }
