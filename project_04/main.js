@@ -3,7 +3,8 @@ const SPOTIFY_CLIENT_SECRET = "161fc5e3df004b95af3ba8c62f3eaf54";
 const PLAYLIST_ID = "5Q5VZcn8fLR1N4upiUvWNl?si=24ebd21262644083";
 const container = document.querySelector('div[data-js="tracks"]');
 const playlistOwner = document.querySelector('h2[data-js="playlistowner"]');
-
+const playlistCover = document.querySelector('img[data-js="playlistcover"]');
+const playlistName = document.querySelector('h2[data-js="playlistname"]');
 
 function fetchPlaylist(token, playlistId) {
   console.log("token: ", token);
@@ -19,7 +20,11 @@ function fetchPlaylist(token, playlistId) {
       console.log(data);
 
       if (data.owner && data.owner.display_name) {
-        playlistOwner.textContent = data.owner.display_name;
+        playlistOwner.textContent = data.owner.display_name + "'s";
+      }
+
+      if (data.name) {
+        playlistName.textContent = data.name;
       }
 
       if (data.tracks && data.tracks.items) {
@@ -27,8 +32,10 @@ function fetchPlaylist(token, playlistId) {
           console.log(item.track.name);
         });
 
-        if (data.images && data.images.length > 0) {
-          displayCoverImage(data.images[0].url);
+
+
+        if (data.images && data.images[0]) {
+          playlistCover.src = data.images[0].url;
         }
 
         addTracksToPage(data.tracks.items);
@@ -39,21 +46,9 @@ function fetchPlaylist(token, playlistId) {
     });
 }
 
-function displayOwner(owner) {
-  const ownerDiv = document.createElement("div");
-  ownerDiv.innerHTML = `<h2>${owner}'s </h2>`;
-  container.appendChild(ownerDiv);
-}
-
-function displayCoverImage(imageUrl) {
-  const coverImageDiv = document.createElement("div");
-  coverImageDiv.innerHTML = `<img src="${imageUrl}" alt="Playlist Cover Image" style="width: 200px; height: 200px;">`;
-  container.appendChild(coverImageDiv);
-}
 
 function addTracksToPage(items) {
   const ul = document.createElement("ul");
-
 
 
   items.forEach((item) => {

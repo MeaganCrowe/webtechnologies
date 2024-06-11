@@ -1,5 +1,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
 }
 
 .album {
@@ -7,9 +8,47 @@
   padding-right: 1em;
 }
 
+#main {
+  display: flex;
+  align-items: center;
+}
+
+/* NAVIGATION */
+
+.navigation {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+  align-items: center;
+}
+
+#logofish {
+  height: 80px;
+  width: auto;
+}
+
+#profile {
+  height: 80px;
+  width: auto;
+  border-radius: 60px;
+}
+
+/* TRACKS */
+
 ul {
   list-style: none;
   display: block;
+  width: auto;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 li {
@@ -20,11 +59,47 @@ li {
   display: inline-flex;
 }
 
+/* HERO MOMENT */
+
 .albumimage {
   width: 80px;
   height: 80px;
 }
 
-.main {
-  display: inline;
+#section_one {
+  display: flex;
+  margin: 40px;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+}
+
+#playlistowner {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  flex-direction: column-reverse;
+  rotate: 180deg;
+  margin-right: 0%;
+}
+
+#heroimage {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0%;
+}
+
+#playlistname {
+  display: flex;
+  justify-content: center;
+}
+
+#playlistcover {
+  height: 60vh;
+  width: auto;
 }

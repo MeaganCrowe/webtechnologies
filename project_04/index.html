@@ -8,14 +8,36 @@
   </head>
 
   <body>
+    <!-- NAVIGATION -->
+    <header>
+      <img id="logofish" src="../images/fish-groove.gif" />
+
+      <div class="navigation">
+        <h3>Playlist 01</h3>
+        <h3>Playlist 02</h3>
+        <h3>Playlist 03</h3>
+      </div>
+
+      <img id="profile" src="../images/fish-face-1.jpg" />
+    </header>
+
+    <!-- SECTIONS -->
+
     <div id="main">
-      <div class="playlist">
-        <h1>Spotify playlist</h1>
-        <h2 data-js="playlistowner"></h2>
-        <div data-js="tracks">
-          <!-- here we are going to display the fetched tracks -->
+      <div id="section_one">
+        <div id="hero">
+          <h2 id="playlistowner" data-js="playlistowner"></h2>
+
+          <div id="heroimage">
+            <h2>playlist</h2>
+            <img id="playlistcover" data-js="playlistcover" />
+          </div>
         </div>
+
+        <div data-js="tracks"></div>
       </div>
     </div>
+
+    <h2 id="playlistname" data-js="playlistname"></h2>
   </body>
 </html>
