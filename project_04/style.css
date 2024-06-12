@@ -1,8 +1,12 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0%;
+  font-size: 16px;
 }
 
+body {
+  background-color: antiquewhite;
+}
 .album {
   display: inline-block;
   padding-right: 1em;
@@ -11,22 +15,48 @@
 #main {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: antiquewhite;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(157, 131, 96);
 }
 
 /* NAVIGATION */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  align-items: center;
+}
 
 .navigation {
   display: flex;
   gap: 80px;
   align-items: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 40px;
-  margin-right: 40px;
-  align-items: center;
+  /* SWAG */
 }
 
 #logofish {
@@ -40,42 +70,78 @@ header {
   border-radius: 60px;
 }
 
+h3 {
+  font-size: 0.8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
 /* TRACKS */
 
 ul {
   list-style: none;
   display: block;
-  width: auto;
+  width: 60vh;
   height: 60vh;
   overflow-x: hidden;
   overflow-y: auto;
+  /* SWAG */
+  border-radius: 30px;
 }
 
 li {
   display: block;
+  align-items: ;
+  background-color: rgb(234, 215, 190);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  align-items: center;
 }
 
 .trackinfo {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-bottom: 2%;
+}
+
+#tracks {
+  display: flex;
+  align-items: center;
+}
+
+.trackname {
+  font-weight: 600;
+  letter-spacing: -0.05em;
 }
 
 /* HERO MOMENT */
 
 .albumimage {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 #section_one {
   display: flex;
-  margin: 40px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
   justify-content: space-evenly;
   align-content: center;
 }
 
 #hero {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 #playlistowner {
@@ -85,6 +151,13 @@ li {
   flex-direction: column-reverse;
   rotate: 180deg;
   margin-right: 0%;
+  justify-content: start;
+  margin-right: -16px;
+  z-index: 1;
+  /* SWAG */
+  font-size: 4.5em;
+  letter-spacing: -0.05em;
+  color: rgb(214, 28, 28);
 }
 
 #heroimage {
@@ -94,12 +167,29 @@ li {
   margin: 0%;
 }
 
+#playlistcover {
+  height: 55vh;
+  width: auto;
+  z-index: 0;
+  border-radius: 40px;
+}
+
+#textplaylist {
+  font-size: 4.5em;
+  letter-spacing: -0.05em;
+  margin-bottom: -16px;
+  z-index: 1;
+}
+
+/* FOOTER */
+
 #playlistname {
   display: flex;
   justify-content: center;
-}
-
-#playlistcover {
-  height: 60vh;
-  width: auto;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 2em;
+  letter-spacing: 0.5em;
+  font-weight: 400;
+  text-align: center;
 }

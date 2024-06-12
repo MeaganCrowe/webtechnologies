@@ -24,7 +24,7 @@ function fetchPlaylist(token, playlistId) {
       }
 
       if (data.name) {
-        playlistName.textContent = data.name;
+        playlistName.textContent = "\"" + data.name + "\""
       }
 
       if (data.tracks && data.tracks.items) {
