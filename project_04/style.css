@@ -5,7 +5,11 @@
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 .album {
   display: inline-block;
@@ -15,7 +19,7 @@ body {
 #main {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 /* SCROLLBAR */
@@ -32,12 +36,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: antiquewhite;
+  background: rgb(199, 170, 133);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(157, 131, 96);
+  background: rgb(124, 101, 71);
 }
 
 /* NAVIGATION */
@@ -45,10 +50,10 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 4vw;
+  margin-right: 4vw;
   align-items: center;
 }
 
@@ -60,14 +65,18 @@ header {
 }
 
 #logofish {
-  height: 80px;
+  height: 30vh;
   width: auto;
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
 }
 
 #profile {
-  height: 80px;
+  height: 10vh;
   width: auto;
-  border-radius: 60px;
+  border-radius: 100px;
+  border: solid 4px #f71a1a;
 }
 
 h3 {
@@ -82,8 +91,8 @@ h3 {
 ul {
   list-style: none;
   display: block;
-  width: 60vh;
-  height: 60vh;
+  width: 30vw;
+  height: 64vh;
   overflow-x: hidden;
   overflow-y: auto;
   /* SWAG */
@@ -92,10 +101,9 @@ ul {
 
 li {
   display: block;
-  align-items: ;
   background-color: rgb(234, 215, 190);
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   padding-left: 20px;
   padding-right: 10px;
   margin-top: 10px;
@@ -135,8 +143,9 @@ li {
   margin-bottom: 10px;
   margin-left: 40px;
   margin-right: 40px;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: center;
+  flex-grow: 1;
 }
 
 #hero {
@@ -155,12 +164,12 @@ li {
   margin-right: -16px;
   z-index: 1;
   /* SWAG */
-  font-size: 4.5em;
+  font-size: 4.5vw;
   letter-spacing: -0.05em;
-  color: rgb(214, 28, 28);
+  color: #f71a1a;
 }
 
-#heroimage {
+#playlistcover-text {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -175,7 +184,7 @@ li {
 }
 
 #textplaylist {
-  font-size: 4.5em;
+  font-size: 4.5vw;
   letter-spacing: -0.05em;
   margin-bottom: -16px;
   z-index: 1;
@@ -183,12 +192,15 @@ li {
 
 /* FOOTER */
 
-#playlistname {
+.playlistname_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  font-size: 2em;
+  flex-grow: 2;
+}
+
+#playlistname {
+  font-size: 2vw;
   letter-spacing: 0.5em;
   font-weight: 400;
   text-align: center;
