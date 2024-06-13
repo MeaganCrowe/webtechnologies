@@ -37,6 +37,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  z-index: 1;
 }
 
 /* Track */
@@ -60,13 +61,15 @@ body {
 
 .navigation {
   display: flex;
-  gap: 100px;
-  align-items: end;
+  gap: 10%;
+  justify-content: center;
+  padding: 1%;
   /* SWAG */
+  border-bottom: 1px solid black;
 }
 
 #logofish {
-  height: 30vh;
+  height: 40vh;
   width: auto;
   position: fixed;
   top: 2vh;
@@ -79,6 +82,13 @@ h3 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+h3:hover {
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  transition-duration: 500ms;
 }
 
 a {
@@ -94,9 +104,9 @@ ul {
   height: 64vh;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-right: 1vw;
+  padding-left: 0;
+  padding-right: 2%;
   /* SWAG */
-  border-radius: 30px;
 }
 
 li {
@@ -142,6 +152,13 @@ li {
   }
 }
 
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4%;
+}
+
 /* HERO MOMENT */
 
 .albumimage {
@@ -153,12 +170,14 @@ li {
 
 #section_one {
   display: flex;
+  margin-top: 10vh;
   margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 5vw;
+  margin-right: 5vw;
   justify-content: center;
   align-content: center;
   flex-grow: 1;
+  gap: 2%;
 }
 
 #hero {
@@ -177,9 +196,9 @@ li {
   margin-right: -16px;
   z-index: 1;
   /* SWAG */
-  font-size: 4.5vw;
+  font-size: 5vw;
   letter-spacing: -0.05em;
-  color: #f71a1a;
+  color: #ef3834;
 }
 
 #playlistcover-text {
@@ -190,7 +209,7 @@ li {
 }
 
 #playlistcover {
-  height: 55vh;
+  height: 60vh;
   width: auto;
   z-index: 0;
   border-radius: 40px;
@@ -198,10 +217,11 @@ li {
 }
 
 #textplaylist {
-  font-size: 4.5vw;
+  font-size: 5vw;
   letter-spacing: -0.05em;
   margin-bottom: -16px;
   z-index: 1;
+  color: #ef3834;
 }
 
 /* FOOTER */
@@ -240,7 +260,7 @@ li {
   height: 5vh;
   color: white;
   border: none;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px;
   padding: 5px 10px;
   cursor: pointer;
 }
@@ -250,7 +270,7 @@ li {
 }
 
 .play-pause:hover {
-  border-radius: 8px;
+  border-radius: 0px;
   background-color: #212121;
 }
 
@@ -271,7 +291,7 @@ li {
   -webkit-appearance: none;
   width: 0.2vw;
   height: 4vh;
-  background: #f71a1a;
+  background: #ef3834;
   border-radius: 20px;
   cursor: pointer;
   margin-top: -2.5vh;
