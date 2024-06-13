@@ -4,17 +4,23 @@
   font-size: 16px;
 }
 
+a {
+  all: unset;
+}
+
 body {
   background: linear-gradient(
     0deg,
     rgba(156, 156, 156, 1) 0%,
     rgba(192, 192, 192, 1) 100%
   );
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
 }
+
 .album {
   display: inline-block;
   padding-right: 1em;
@@ -40,31 +46,22 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f71a1a;
+  background: #c0c0c0;
   border-radius: 10px;
+  transition-duration: 2000ms;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #000000;
+  background: #6d6d6d;
 }
 
 /* NAVIGATION */
 
-header {
-  display: flex;
-  justify-content: center;
-  margin-top: 8vh;
-  margin-bottom: 8vh;
-  margin-left: 4vw;
-  margin-right: 4vw;
-  align-items: center;
-}
-
 .navigation {
   display: flex;
   gap: 100px;
-  align-items: center;
+  align-items: end;
   /* SWAG */
 }
 
@@ -74,20 +71,18 @@ header {
   position: fixed;
   top: 2vh;
   left: 2vw;
-}
-
-#profile {
-  height: 10vh;
-  width: auto;
-  border-radius: 100px;
-  border: solid 4px #f71a1a;
+  z-index: 2;
 }
 
 h3 {
   font-size: 0.8em;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+a {
+  font-size: 0.8em;
 }
 
 /* TRACKS */
@@ -107,11 +102,11 @@ ul {
 li {
   display: block;
   background-color: #c0c0c0;
-  padding-top: 20px;
-  padding-bottom: 18px;
-  padding-left: 20px;
-  padding-right: 10px;
-  margin-bottom: 2vh;
+  padding-top: 3vh;
+  padding-bottom: 0px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-bottom: 3vh;
   border-radius: 8px;
   align-items: center;
   filter: drop-shadow(rgba(0, 0, 0, 0.025) 2px 2px 8px);
@@ -121,7 +116,7 @@ li {
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin-bottom: 2%;
+  margin-bottom: 3vh;
 }
 
 #tracks {
@@ -199,6 +194,7 @@ li {
   width: auto;
   z-index: 0;
   border-radius: 40px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.025) 2px 2px 8px);
 }
 
 #textplaylist {
@@ -227,53 +223,82 @@ li {
 /* PLAYER */
 
 .custom-audio-player {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  ali
+  align-items: flex-end;
+  justify-content: space-between;
+  width: calc(100% + 4vw);
+  margin-left: -2vw;
 }
 
 .custom-audio-player .play-pause {
-  background-color: #f71a1a;
+  background-color: #000000;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 27%;
+  height: 5vh;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-bottom-left-radius: 8px;
   padding: 5px 10px;
   cursor: pointer;
 }
 
+.play-pause {
+  transition-duration: 200ms;
+}
+
+.play-pause:hover {
+  border-radius: 8px;
+  background-color: #212121;
+}
+
 .custom-audio-player .seek-bar {
   -webkit-appearance: none;
-  width: 100px;
-  height: 4vh;
+  position: relative;
+  width: 73%;
+  height: 5vh;
   background: #ddd;
-  border-radius: 5px;
-  outline: none;
-  align-items: center;
-  position: relative; /* Position relative to position thumb */
+  border-bottom-right-radius: 8px;
+  background: rgb(183, 183, 183);
+  align-items: end;
+  align-content: flex-end;
+  cursor: pointer;
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 4px;
-  height: 3vh;
+  width: 0.2vw;
+  height: 4vh;
   background: #f71a1a;
-  border-radius: 0%;
+  border-radius: 20px;
   cursor: pointer;
-  border: 0px solid #000;
-  margin-top: -5px; /* Align thumb vertically */
+  margin-top: -2.5vh;
+  transition-duration: 200ms;
+}
+.seek-bar::-webkit-slider-thumb:hover {
+  background: #a01010;
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-runnable-track {
   width: 100%;
-  height: 3px;
-  background: #ddd;
+  height: 5px;
+  background: #ff6c6c00;
   border-radius: 5px;
-  align-items: center;
+  align-content: flex-end;
 }
 
 .custom-audio-player .current-time,
 .custom-audio-player .total-time {
-  font-size: 14px;
+  font-size: 0.8em;
+}
+
+.timerall {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  position: absolute;
+  right: 1vh;
+  bottom: 1vh;
 }
