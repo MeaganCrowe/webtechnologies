@@ -9,11 +9,7 @@ a {
 }
 
 body {
-  background: linear-gradient(
-    0deg,
-    rgba(156, 156, 156, 1) 0%,
-    rgba(192, 192, 192, 1) 100%
-  );
+  background: black;
 
   display: flex;
   flex-direction: column;
@@ -34,9 +30,9 @@ body {
 
 #cursor-circle {
   position: absolute;
-  width: 70vh;
-  height: 70vh;
-  background-color: rgb(255, 255, 255);
+  width: 80vh;
+  height: 80vh;
+  background-color: #eb55ff;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -72,12 +68,13 @@ body {
 /* NAVIGATION */
 
 .navigation {
+  color: white;
   display: flex;
   gap: 10%;
   justify-content: center;
   padding: 1%;
   /* SWAG */
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 #logofish {
@@ -123,7 +120,8 @@ ul {
 
 li {
   display: block;
-  background-color: #c0c0c0;
+  background-color: #121212;
+  color: white;
   padding-top: 3vh;
   padding-bottom: 0px;
   padding-left: 2vw;
@@ -210,7 +208,7 @@ li {
   /* SWAG */
   font-size: 5vw;
   letter-spacing: -0.05em;
-  color: #ef3834;
+  color: #eb55ff;
 }
 
 #playlistcover-text {
@@ -233,7 +231,7 @@ li {
   letter-spacing: -0.05em;
   margin-bottom: -16px;
   z-index: 1;
-  color: #ef3834;
+  color: #ed68ff;
 }
 
 /* FOOTER */
@@ -246,6 +244,7 @@ li {
 }
 
 #playlistname {
+  color: white;
   font-size: 2vw;
   letter-spacing: 0.5em;
   font-weight: 400;
@@ -293,7 +292,7 @@ li {
   height: 5vh;
   background: #ddd;
   border-bottom-right-radius: 8px;
-  background: rgb(183, 183, 183);
+  background: rgb(55, 55, 55);
   align-items: end;
   align-content: flex-end;
   cursor: pointer;
@@ -303,14 +302,14 @@ li {
   -webkit-appearance: none;
   width: 0.2vw;
   height: 4vh;
-  background: #ef3834;
+  background: #eb55ff;
   border-radius: 20px;
   cursor: pointer;
   margin-top: -2.5vh;
   transition-duration: 200ms;
 }
 .seek-bar::-webkit-slider-thumb:hover {
-  background: #a01010;
+  background: #7725b5;
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-runnable-track {

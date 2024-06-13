@@ -34,8 +34,8 @@ body {
 
 #cursor-circle {
   position: absolute;
-  width: 70vh;
-  height: 70vh;
+  width: 80vh;
+  height: 80vh;
   background-color: rgb(117, 255, 114);
   border-radius: 50%;
   pointer-events: none;
