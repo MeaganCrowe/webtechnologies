@@ -32,6 +32,18 @@ body {
   justify-content: space-between;
 }
 
+#cursor-circle {
+  position: absolute;
+  width: 70vh;
+  height: 70vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: -1;
+}
+
 /* SCROLLBAR */
 
 /* width */

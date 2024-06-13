@@ -6,6 +6,14 @@ const playlistOwner = document.querySelector('h2[data-js="playlistowner"]');
 const playlistCover = document.querySelector('img[data-js="playlistcover"]');
 const playlistName = document.querySelector('h2[data-js="playlistname"]');
 
+
+const circle = document.getElementById("cursor-circle");
+
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = `${e.pageX}px`;
+  circle.style.top = `${e.pageY}px`;
+});
+
 function fetchPlaylist(token, playlistId) {
   console.log("token: ", token);
 
