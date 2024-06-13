@@ -34,8 +34,8 @@ body {
 
 #cursor-circle {
   position: absolute;
-  width: 70vh;
-  height: 70vh;
+  width: 80vh;
+  height: 80vh;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   pointer-events: none;
@@ -245,7 +245,7 @@ li {
   flex-grow: 2;
 }
 
-#playlistname {
+.playlistname {
   font-size: 2vw;
   letter-spacing: 0.5em;
   font-weight: 400;
@@ -301,16 +301,12 @@ li {
 
 .custom-audio-player .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 0.2vw;
+  width: 4vh;
   height: 4vh;
-  background: #ef3834;
   border-radius: 20px;
   cursor: pointer;
   margin-top: -2.5vh;
   transition-duration: 200ms;
-}
-.seek-bar::-webkit-slider-thumb:hover {
-  background: #a01010;
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-runnable-track {

@@ -1,10 +1,18 @@
 const SPOTIFY_CLIENT_ID = "67b411e20d594f30bf7a8d3bbde54285";
 const SPOTIFY_CLIENT_SECRET = "161fc5e3df004b95af3ba8c62f3eaf54";
-const PLAYLIST_ID = "5Q5VZcn8fLR1N4upiUvWNl?si=24ebd21262644083";
+const PLAYLIST_ID = "5Q5VZcn8fLR1N4upiUvWNl?si=51ccfc275c2d4b81";
 const container = document.querySelector('div[data-js="tracks"]');
 const playlistOwner = document.querySelector('h2[data-js="playlistowner"]');
 const playlistCover = document.querySelector('img[data-js="playlistcover"]');
 const playlistName = document.querySelector('h2[data-js="playlistname"]');
+
+
+const circle = document.getElementById("cursor-circle");
+
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = `${e.pageX}px`;
+  circle.style.top = `${e.pageY}px`;
+});
 
 function fetchPlaylist(token, playlistId) {
   console.log("token: ", token);
@@ -70,8 +78,9 @@ function addTracksToPage(items) {
         ${item.track.preview_url
           ? `<button class="play-pause">Play</button>
              <input type="range" class="seek-bar" value="0">
-             <span class="current-time">0:00</span> / 
-             <span class="total-time">0:30</span>`
+             
+             <div class="timerall"><span class="current-time">0:00</span> / 
+             <span class="total-time">0:30</span></div>`
           : "<p>No Preview Available</p>"
         }
       </div>
@@ -84,55 +93,55 @@ function addTracksToPage(items) {
   initializeCustomPlayers(); // Ensure this is called here
 }
 
-function initializeCustomPlayers() {
-  const players = document.querySelectorAll(".custom-audio-player");
 
-  players.forEach(player => {
-    const audioUrl = player.dataset.url;
-    if (!audioUrl) {
-      console.warn("No preview URL available for this track");
-      return;
-    }
-
-    const audio = new Audio(audioUrl);
-    const playPauseButton = player.querySelector(".play-pause");
-    const seekBar = player.querySelector(".seek-bar");
-    const currentTimeElem = player.querySelector(".current-time");
-    const totalTimeElem = player.querySelector(".total-time");
-
-    let isPlaying = false;
-
-    playPauseButton.addEventListener("click", () => {
-      if (isPlaying) {
-        audio.pause();
-        playPauseButton.textContent = "Play";
-      } else {
-        audio.play();
-        playPauseButton.textContent = "Pause";
+  function initializeCustomPlayers() {
+    const players = document.querySelectorAll(".custom-audio-player");
+  
+    players.forEach(player => {
+      const audioUrl = player.dataset.url;
+      if (!audioUrl) {
+        console.warn("No preview URL available for this track");
+        return;
       }
-      isPlaying = !isPlaying;
+  
+      const audio = new Audio(audioUrl);
+      const playPauseButton = player.querySelector(".play-pause");
+      const seekBar = player.querySelector(".seek-bar");
+      const currentTimeElem = player.querySelector(".current-time");
+      const totalTimeElem = player.querySelector(".total-time");
+  
+      let isPlaying = false;
+  
+      playPauseButton.addEventListener("click", () => {
+        if (isPlaying) {
+          audio.pause();
+          playPauseButton.textContent = "Play";
+        } else {
+          audio.play();
+          playPauseButton.textContent = "Pause";
+        }
+        isPlaying = !isPlaying;
+      });
+  
+      audio.addEventListener("timeupdate", () => {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+        seekBar.value = (currentTime / duration) * 100;
+        currentTimeElem.textContent = formatTime(currentTime);
+      });
+  
+      seekBar.addEventListener("input", () => {
+        const duration = audio.duration;
+        audio.currentTime = (seekBar.value / 100) * duration;
+      });
+  
+      function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        seconds = Math.floor(seconds % 60);
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+      }
     });
-
-    audio.addEventListener("timeupdate", () => {
-      const currentTime = audio.currentTime;
-      const duration = audio.duration;
-      seekBar.value = (currentTime / duration) * 100;
-      currentTimeElem.textContent = formatTime(currentTime);
-    });
-
-    seekBar.addEventListener("input", () => {
-      const duration = audio.duration;
-      audio.currentTime = (seekBar.value / 100) * duration;
-    });
-
-    function formatTime(seconds) {
-      const minutes = Math.floor(seconds / 60);
-      seconds = Math.floor(seconds % 60);
-      return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-    }
-  });
-}
-
+  }
 function fetchAccessToken() {
   fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
