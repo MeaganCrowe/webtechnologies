@@ -246,10 +246,11 @@ li {
 }
 
 .playlistname {
-  font-size: 2vw;
-  letter-spacing: 0.5em;
-  font-weight: 400;
-  text-align: center;
+  font-size: 2vw !important;
+  letter-spacing: 0.5em !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  color: black !important;
 }
 
 /* PLAYER */
@@ -301,12 +302,17 @@ li {
 
 .custom-audio-player .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 4vh;
+  width: 0.2vw;
   height: 4vh;
+  background: #ef3834;
   border-radius: 20px;
   cursor: pointer;
   margin-top: -2.5vh;
   transition-duration: 200ms;
+}
+
+.seek-bar::-webkit-slider-thumb:hover {
+  background: #971210;
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-runnable-track {

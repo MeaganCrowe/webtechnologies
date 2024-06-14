@@ -59,7 +59,8 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c0c0c0;
+  background: #e8e8e8;
+  border: solid 1px rgba(0, 0, 0, 0.352);
   border-radius: 10px;
   transition-duration: 2000ms;
 }
@@ -75,16 +76,23 @@ body {
   display: flex;
   gap: 10%;
   justify-content: center;
-  padding: 1%;
+  padding: 2%;
+  padding-bottom: 2%;
   /* SWAG */
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
 
-  background: linear-gradient(272deg, rgba(255, 255, 255, 0.02) 7.36%, rgba(255, 255, 255, 0.13) 27.81%, rgba(255, 255, 255, 0.00) 41.21%, rgba(255, 255, 255, 0.14) 60.31%, rgba(255, 255, 255, 0.00) 76.52%, rgba(255, 255, 255, 0.20) 99.12%), linear-gradient(0deg, rgba(56, 156, 234, 0.58) 0%, rgba(56, 156, 234, 0.58) 100%), linear-gradient(180deg, rgba(176, 176, 176, 0.80) 0%, rgba(11, 10, 38, 0.80) 47.17%, rgba(13, 15, 41, 0.80) 51.56%, rgba(15, 15, 46, 0.80) 100%);
-  
+  background: linear-gradient(
+    272deg,
+    rgba(255, 255, 255, 0.02) 7.36%,
+    rgba(255, 255, 255, 0.13) 27.81%
+  );
+
   background-blend-mode: overlay, normal, normal;
   /* Window Active, Taskbar */
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.40) inset, 0px -1px 1px 0px rgba(0, 0, 0, 0.137) inset, 0px -1px 10px 0px rgba(0, 0, 0, 0.285);
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.4) inset,
+    0px -1px 1px 0px rgba(0, 0, 0, 0.137) inset,
+    0px -1px 10px 0px rgba(0, 0, 0, 0.142);
   backdrop-filter: blur(2px);
 }
 
@@ -141,13 +149,34 @@ li {
   /* SWAG */
   border-radius: 20px;
 
-  background: linear-gradient(272deg, rgba(255, 255, 255, 0.02) 7.36%, rgba(255, 255, 255, 0.13) 27.81%, rgba(255, 255, 255, 0.00) 41.21%, rgba(255, 255, 255, 0.14) 60.31%, rgba(255, 255, 255, 0.00) 76.52%, rgba(255, 255, 255, 0.20) 99.12%), linear-gradient(0deg, rgba(56, 156, 234, 0.58) 0%, rgba(56, 156, 234, 0.58) 100%), linear-gradient(180deg, rgba(176, 176, 176, 0.80) 0%, rgba(11, 10, 38, 0.80) 47.17%, rgba(13, 15, 41, 0.80) 51.56%, rgba(15, 15, 46, 0.80) 100%);
-  
+  background: linear-gradient(
+      272deg,
+      rgba(255, 255, 255, 0.02) 7.36%,
+      rgba(255, 255, 255, 0.13) 27.81%,
+      rgba(255, 255, 255, 0) 41.21%,
+      rgba(255, 255, 255, 0.14) 60.31%,
+      rgba(255, 255, 255, 0) 76.52%,
+      rgba(255, 255, 255, 0.2) 99.12%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(56, 156, 234, 0.58) 0%,
+      rgba(56, 156, 234, 0.58) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(176, 176, 176, 0.8) 0%,
+      rgba(11, 10, 38, 0.8) 47.17%,
+      rgba(13, 15, 41, 0.8) 51.56%,
+      rgba(15, 15, 46, 0.8) 100%
+    );
+
   background-blend-mode: overlay, normal, normal;
   /* Window Active, Taskbar */
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.40) inset, 0px -1px 1px 0px rgba(0, 0, 0, 0.30) inset, 0px -1px 10px 0px rgba(0, 0, 0, 0.80);
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.4) inset,
+    0px -1px 1px 0px rgba(0, 0, 0, 0.162) inset,
+    0px -1px 10px 0px rgba(0, 0, 0, 0.299);
   backdrop-filter: blur(2px);
-s
 }
 
 .trackinfo {
@@ -184,7 +213,7 @@ s
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 4%;
+  gap: 1%;
 }
 
 /* HERO MOMENT */
@@ -278,7 +307,6 @@ s
   justify-content: space-between;
   width: calc(100% + 4vw);
   margin-left: -2vw;
-
 }
 
 .custom-audio-player .play-pause {
@@ -293,11 +321,8 @@ s
   border: none;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-background: linear-gradient(180deg, #F5F6FD 0%, #929397 67.5%, #FCFCFC 87.5%);
-transition-duration: 400ms;
-
-
-
+  background: linear-gradient(180deg, #f5f6fd 0%, #a7bce5 67.5%, #fcfcfc 87.5%);
+  transition-duration: 400ms;
 }
 
 .play-pause {
@@ -306,7 +331,7 @@ transition-duration: 400ms;
 
 .play-pause:hover {
   transition-duration: 400ms;
-  background: linear-gradient(180deg, #f2f2f2 0%, #7a7a7b 67.5%, #d2d2d2 87.5%);
+  background: linear-gradient(180deg, #ffffff 0%, #c4d3f2 67.5%, #ffffff 87.5%);
 }
 
 .custom-audio-player .seek-bar {
@@ -316,13 +341,32 @@ transition-duration: 400ms;
   height: 5vh;
   background: #ddd;
   border-bottom-right-radius: 20px;
-  background: linear-gradient(272deg, rgba(255, 255, 255, 0.02) 7.36%, rgba(255, 255, 255, 0.13) 27.81%, rgba(255, 255, 255, 0.00) 41.21%, rgba(255, 255, 255, 0.14) 60.31%, rgba(255, 255, 255, 0.00) 76.52%, rgba(255, 255, 255, 0.20) 99.12%), linear-gradient(0deg, rgba(56, 156, 234, 0.58) 0%, rgba(56, 156, 234, 0.58) 100%), linear-gradient(180deg, rgba(176, 176, 176, 0.80) 0%, rgba(11, 10, 38, 0.80) 47.17%, rgba(13, 15, 41, 0.80) 51.56%, rgba(15, 15, 46, 0.80) 100%);
-  
+  background: linear-gradient(
+      272deg,
+      rgba(255, 255, 255, 0.02) 7.36%,
+      rgba(255, 255, 255, 0.13) 27.81%,
+      rgba(255, 255, 255, 0) 41.21%,
+      rgba(255, 255, 255, 0.14) 60.31%,
+      rgba(255, 255, 255, 0) 76.52%,
+      rgba(255, 255, 255, 0.2) 99.12%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(56, 156, 234, 0.58) 0%,
+      rgba(56, 156, 234, 0.58) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(176, 176, 176, 0.8) 0%,
+      rgba(11, 10, 38, 0.8) 47.17%,
+      rgba(13, 15, 41, 0.8) 51.56%,
+      rgba(15, 15, 46, 0.8) 100%
+    );
+
   background-blend-mode: overlay, normal, normal;
   /* Window Active, Taskbar */
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.40) inset;
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.4) inset;
   backdrop-filter: blur(2px);
-s
   align-items: start;
   align-content: flex-end;
   cursor: pointer;
@@ -330,31 +374,36 @@ s
 
 .custom-audio-player .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 2vh;
-  height: 2vh;
-  margin-top: -0.7vh; 
-  border-radius: 50%; 
+  width: 1.5vh;
+  height: 1.5vh;
+  margin-top: -0.7vh;
+  border-radius: 50%;
   cursor: pointer;
-  background: radial-gradient(100.01% 100.01% at 50% 50%, #D9D9D9 0%, #737373 100%);
+  background: radial-gradient(
+    100.01% 100.01% at 50% 50%,
+    #ededed 0%,
+    #a1a1a1 100%
+  );
   border: solid 1px rgba(37, 52, 140, 0.508);
   filter: drop-shadow(rgba(0, 0, 0, 0.167) 2px 2px 8px);
 }
 
 .seek-bar::-webkit-slider-thumb:hover {
-  background: radial-gradient(100.01% 100.01% at 50% 50%, #D9D9D9 0%, #3e3e3e 100%);
+  background: radial-gradient(
+    100.01% 100.01% at 50% 50%,
+    #d9d9d9 0%,
+    #6c6c6c 100%
+  );
   border: solid 1px rgba(37, 52, 140, 0.644);
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-runnable-track {
   width: 100%;
-  height: 1vh; /* Ensure the track height is compatible with thumb height */
-  border: 1px solid #3CB016;
+  height: 0.5vh; /* Ensure the track height is compatible with thumb height */
+  border: 1px solid #3cb016;
   background: #c4ff3a;
   filter: drop-shadow(rgba(0, 0, 0, 0.025) 2px 2px 8px);
 }
-
-
-
 
 .timerall {
   font-weight: 700;

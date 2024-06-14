@@ -32,12 +32,13 @@ body {
   position: absolute;
   width: 80vh;
   height: 80vh;
-  background-color: #eb55ff;
+  background-color: #f7b53e;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   filter: blur(100px);
   z-index: -1;
+  border: 80px solid rgb(255, 0, 106);
 }
 
 /* SCROLLBAR */
@@ -45,36 +46,42 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  /* border-bottom: 1px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  background: rgb(176, 176, 176); */
   z-index: 1;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f100;
+  /* background: #f1f1f100; */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c0c0c0;
-  border-radius: 10px;
+  background: #000000;
   transition-duration: 2000ms;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #6d6d6d;
+  background: rgb(255, 0, 106);
 }
 
 /* NAVIGATION */
 
 .navigation {
-  color: white;
+  color: #000000;
+  background-color: #0000002b;
   display: flex;
   gap: 10%;
   justify-content: center;
-  padding: 1%;
+  padding: 3%;
   /* SWAG */
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 #logofish {
@@ -114,22 +121,22 @@ ul {
   overflow-x: hidden;
   overflow-y: auto;
   padding-left: 0;
-  padding-right: 2%;
+
   /* SWAG */
 }
 
 li {
   display: block;
-  background-color: #121212;
-  color: white;
+  background-color: #00000032;
+  color: rgb(0, 0, 0);
   padding-top: 3vh;
-  padding-bottom: 0px;
+  padding-bottom: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
-  margin-bottom: 3vh;
-  border-radius: 8px;
   align-items: center;
-  filter: drop-shadow(rgba(0, 0, 0, 0.025) 2px 2px 8px);
+  border-radius: 10px;
+  margin-bottom: 2%;
+  filter: drop-shadow(rgba(0, 0, 0, 0.025) 2px 2px 20px);
 }
 
 .trackinfo {
@@ -166,7 +173,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 4%;
+  gap: 2vh;
 }
 
 /* HERO MOMENT */
@@ -208,7 +215,7 @@ li {
   /* SWAG */
   font-size: 5vw;
   letter-spacing: -0.05em;
-  color: #eb55ff;
+  color: #000000;
 }
 
 #playlistcover-text {
@@ -231,7 +238,7 @@ li {
   letter-spacing: -0.05em;
   margin-bottom: -16px;
   z-index: 1;
-  color: #ed68ff;
+  color: #000000;
 }
 
 /* FOOTER */
@@ -244,7 +251,7 @@ li {
 }
 
 #playlistname {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 2vw;
   letter-spacing: 0.5em;
   font-weight: 400;
@@ -256,20 +263,18 @@ li {
 .custom-audio-player {
   position: relative;
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
-  width: calc(100% + 4vw);
-  margin-left: -2vw;
+  gap: 1%;
 }
 
 .custom-audio-player .play-pause {
-  background-color: #000000;
+  background-color: #00000049;
   font-size: 0.5em;
   text-transform: uppercase;
   font-weight: 700;
   width: 27%;
-  height: 5vh;
-  color: white;
+  height: 4vh;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 8px;
   padding: 5px 10px;
@@ -281,18 +286,19 @@ li {
 }
 
 .play-pause:hover {
-  border-radius: 0px;
-  background-color: #212121;
+  width: 30%;
+  background-color: #00000024;
 }
 
 .custom-audio-player .seek-bar {
   -webkit-appearance: none;
   position: relative;
   width: 73%;
-  height: 5vh;
+  height: 4vh;
   background: #ddd;
   border-bottom-right-radius: 8px;
-  background: rgb(55, 55, 55);
+  border-radius: 8px;
+  background-color: #00000049;
   align-items: end;
   align-content: flex-end;
   cursor: pointer;
@@ -300,16 +306,18 @@ li {
 
 .custom-audio-player .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 0.2vw;
-  height: 4vh;
-  background: #eb55ff;
-  border-radius: 20px;
+  width: 1vh;
+  height: 1vh;
+  background: #ffde5c;
+  border: 1px solid rgb(255, 0, 106);
+  filter: blur(1px);
+  border-radius: 50%;
   cursor: pointer;
-  margin-top: -2.5vh;
+  margin-top: -1vh;
   transition-duration: 200ms;
 }
 .seek-bar::-webkit-slider-thumb:hover {
-  background: #7725b5;
+  background: #c2dd18;
 }
 
 .custom-audio-player .seek-bar::-webkit-slider-runnable-track {

@@ -1,6 +1,6 @@
 const SPOTIFY_CLIENT_ID = "67b411e20d594f30bf7a8d3bbde54285";
 const SPOTIFY_CLIENT_SECRET = "161fc5e3df004b95af3ba8c62f3eaf54";
-const PLAYLIST_ID = "5Q5VZcn8fLR1N4upiUvWNl?si=51ccfc275c2d4b81";
+const PLAYLIST_ID = "1dQpHReVE0PPezXdCcKhIW?si=5ba06ea6c20440cb";
 const container = document.querySelector('div[data-js="tracks"]');
 const playlistOwner = document.querySelector('h2[data-js="playlistowner"]');
 const playlistCover = document.querySelector('img[data-js="playlistcover"]');
