@@ -6,6 +6,7 @@
 
 a {
   all: unset;
+  font-size: 0.8em;
 }
 
 body {
@@ -19,6 +20,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  /* DONT SCROLL PLEASE */
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100%;
+  overflow-y: hidden;
 }
 
 .album {
@@ -46,25 +52,21 @@ body {
 
 /* SCROLLBAR */
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
   z-index: 1;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f100;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #c0c0c0;
   border-radius: 10px;
   transition-duration: 2000ms;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #6d6d6d;
 }
@@ -101,10 +103,6 @@ h3:hover {
   font-weight: 700;
   letter-spacing: 0.3em;
   transition-duration: 500ms;
-}
-
-a {
-  font-size: 0.8em;
 }
 
 /* TRACKS */
@@ -152,6 +150,7 @@ li {
 }
 
 /* Responsive design */
+
 @media (max-width: 768px) {
   audio {
     max-width: 80%;

@@ -19,6 +19,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  /* DONT SCROLL PLEASE*/
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100%;
+  overflow-y: hidden;
 }
 
 .album {
@@ -55,8 +60,8 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #e8e8e8;
-  border: solid 1px rgba(0, 0, 0, 0.352);
+  background: #e8e8e886;
+  border: solid 1px rgba(0, 0, 0, 0.192);
   border-radius: 10px;
 }
 
@@ -82,7 +87,7 @@ body {
   padding: 2%;
   padding-bottom: 2%;
   /* SWAG */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border-radius: 10px;
 
   background: linear-gradient(
@@ -216,7 +221,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 1%;
+  gap: 1vh;
 }
 
 /* HERO MOMENT */
